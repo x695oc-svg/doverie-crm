@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0f1115">
+<title>Регистрация — Home CRM</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="register">
+<div class="auth-wrap"><form class="card auth-card" id="register-form" novalidate>
+  <h1>Регистрация</h1><p class="muted" style="margin:0">После регистрации администратор должен одобрить доступ.</p>
+  <label class="field"><span>Логин (4–20 символов: латиница, цифры, _)</span><input id="login" autocomplete="username" autocapitalize="none" maxlength="20"></label>
+  <label class="field"><span>Отображаемое имя</span><input id="name" autocomplete="name" maxlength="40"></label>
+  <label class="field"><span>Пароль</span><div class="pw-wrap"><input id="password" type="password" autocomplete="new-password">
+    <button type="button" class="icon-btn" id="toggle-pw" aria-label="Показать пароль" title="Показать/скрыть пароль"><i data-lucide="eye"></i></button></div></label>
+  <div class="meter"><div id="meter-bar"></div></div><div class="small muted" id="meter-text">Надёжность пароля</div>
+  <ul class="rules" id="rules"></ul>
+  <label class="field"><span>Повторите пароль</span><input id="password2" type="password" autocomplete="new-password"></label>
+  <div class="form-error" id="form-error" role="alert"></div>
+  <button class="btn primary" style="justify-content:center">Зарегистрироваться</button>
+  <p class="muted small" style="margin:0;text-align:center">Уже есть аккаунт? <a href="login.html">Войти</a></p>
+</form></div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script type="module" src="js/auth.js"></script>
+</body></html>

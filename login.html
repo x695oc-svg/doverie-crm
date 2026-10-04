@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0f1115">
+<title>Вход — Home CRM</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+<div class="auth-wrap"><form class="card auth-card" id="login-form" novalidate>
+  <h1>Вход в Home CRM</h1><p class="muted" style="margin:0">Введите логин и пароль</p>
+  <label class="field"><span>Логин</span><input id="login" autocomplete="username" autocapitalize="none" required></label>
+  <label class="field"><span>Пароль</span><div class="pw-wrap"><input id="password" type="password" autocomplete="current-password" required>
+    <button type="button" class="icon-btn" id="toggle-pw" aria-label="Показать пароль" title="Показать/скрыть пароль"><i data-lucide="eye"></i></button></div></label>
+  <div class="form-error" id="form-error" role="alert"></div>
+  <button class="btn primary" id="submit" style="justify-content:center">Войти</button>
+  <p class="muted small" style="margin:0;text-align:center">Нет аккаунта? <a href="register.html">Регистрация</a></p>
+</form></div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script type="module" src="js/auth.js"></script>
+</body></html>
